@@ -14,7 +14,7 @@
  
 - - -
  
-* Technologies utilized :
+* **Technologies utilized** :
 
   * **HTML**
   * **CSS**
@@ -24,7 +24,7 @@
   * **GITHUB**
   * **GITHUB DESKTOP**
  
-* Challenges :
+* **Challenges** :
 
   * **Bugs caused by mispelling**
   * **Making the webpage responsive on any screen size**
@@ -33,7 +33,7 @@
   * **understanding grid layout.**
   * **understanding and implementing utility classes using CSS.**
  
-* Improvements :
+* **Improvements** :
 
   * **Adding auto suggestions when searching for Pokémon.**
   

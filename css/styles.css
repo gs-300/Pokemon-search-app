@@ -39,6 +39,9 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+  margin: 0 auto;
   
 }
 
@@ -57,10 +60,11 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  max-width: 400px;
+  min-width: 50px;
+  max-width: 80%;
   background-color: white;
   margin: 10px;
-  border: .1rem solid;
+  border: 0.1rem solid;
   border-radius: 20px;
   box-shadow: 0 0 30px black;
 
@@ -168,7 +172,7 @@ background-color: #228b22;
   display: flex;
   flex-direction: column;
   min-height: 100px;
-  max-width: 80%;
+  min-width: 80%;
   align-items: center;
 
 
@@ -353,7 +357,11 @@ td {
   }
 
   .container {
-    width: 100%; /* with on very small screens*/
+    width: 80%; /* with on very small screens*/
+  }
+
+  label {
+    font-size: 1rem;
   }
 
 }

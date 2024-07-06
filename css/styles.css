@@ -39,7 +39,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   
 }
 
@@ -50,7 +49,6 @@ h1 {
   text-decoration: underline;
   color: white;
   margin: 40px;
-
 
 }
 
@@ -72,12 +70,13 @@ h1 {
 #search-form {
   display: flex;
   justify-content: center;
-  
 
 }
 
 #search-form {
   flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   margin: 10px;
   padding: 10px;
   padding-bottom: 28px;
@@ -87,6 +86,7 @@ h1 {
 
 label {
   font-size: 1.2rem;
+  font-weight: bold;
 
 }
 
@@ -94,8 +94,11 @@ input {
   width: 50%;
   height: 40px;
   padding: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   cursor: grab;
   box-shadow: -2px 2px 10px #228b22;
+  text-align: center;
   
 }
 
@@ -123,10 +126,12 @@ background-color: #228b22;
 }
 
 .search-output {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
  background-color: white;
  margin: 10px 0;
  padding: 10px;
- 
  
 }
 
@@ -144,17 +149,28 @@ background-color: #228b22;
 
 .pokemon-size {
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-around;
   height: 34px;
   
+}
+
+#weight {
+  margin: 4px;
+}
+
+#height {
+  margin: 4px;
 }
 
 .output-top,
 .output-bottom {
   display: flex;
   flex-direction: column;
-  min-height: 200px;
-  width: 100%;
+  min-height: 100px;
+  max-width: 80%;
+  align-items: center;
+
 
 }
 
@@ -172,9 +188,10 @@ background-color: #228b22;
 #types {
   display: flex;
   flex-direction: column;
-  width: 80px;
+  align-items: center;
+  min-width: 80px;
   min-height: 40px;
-  margin: 0 auto;
+  
 }
 
 .type {
@@ -190,14 +207,23 @@ background-color: #228b22;
   border-radius: 10px;
   margin: 20px;
   
-  
 }
 
 table {
-max-width: 100%;
+max-width: 90%;
 box-shadow: 0 0 5px black;
 border-collapse: seperate;
 
+}
+
+.table-stats {
+  padding: 10px;
+}
+
+.table-base,
+.table-stats {
+  color: black;
+  border: transparent;
 }
 
 th, 
@@ -212,16 +238,17 @@ tr {
   color: white;
   height: 40px;
   font-size: 1.4rem;
-  
 
+}
+
+.stat-name {
+  padding: 10px;
 }
 
 td {
   border: 1px solid;
 
 }
-
-
 
 
 /*type styling  */
@@ -316,7 +343,6 @@ td {
 
   }
   
-
   
 }
 

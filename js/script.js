@@ -11,8 +11,10 @@ const defense = document.getElementById("defense");
 const specialAttack = document.getElementById("special-attack");
 const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
-const searchForm = document.getElementById("search-form");
-const searchInput = document.getElementById("search-input");
+const searchWrapper = document.getElementById("search_wrapper");
+const searchInput = document.querySelector(".search-input");
+const searchButton = document.getElementById("search-button");
+
 
     // Get data
 
@@ -78,8 +80,19 @@ const updateUserInterFace = () => {
 
 }
 
-searchForm.addEventListener("submit", e => {
-  e.preventDefault();
-    searchForPokemon();
+/* BUTTON EVENT LISTENER */
+
+
+searchButton.addEventListener("click", () => 
+  searchForPokemon());
+
+
+/* Since I am going to be changing the 
+container to a div element 
+from a form element */
+
+// searchForm.addEventListener("submit", e => {
+//   e.preventDefault();
+//     searchForPokemon();
   
-})
+// })

@@ -19,7 +19,6 @@ body {
   height: 100vh;
   background-color: black;
  
-}
 
 &::before {
   content: "";
@@ -31,6 +30,7 @@ body {
   background-image: url('/images/pokemonApp\ wallpaper.png');
   background-size: cover;
   opacity: 0.2;
+}
 }
 
 main {
@@ -71,13 +71,13 @@ h1 {
 }
 
 .output-bottom,
-#search-form {
+#search_wrapper {
   display: flex;
   justify-content: center;
 
 }
 
-#search-form {
+#search_wrapper {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
@@ -92,6 +92,12 @@ label {
   font-size: 1.2rem;
   font-weight: bold;
 
+}
+
+#search-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input {
@@ -334,7 +340,7 @@ td {
   background-color: #027951;
 }
 
-/* responsive styling */
+/* MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
 

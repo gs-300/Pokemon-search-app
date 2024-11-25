@@ -14,6 +14,65 @@ const speed = document.getElementById("speed");
 const searchWrapper = document.getElementById("search_wrapper");
 const searchInput = document.querySelector(".search-input");
 const searchButton = document.getElementById("search-button");
+const suggestions = document.getElementById("suggestions"); //new
+
+
+let pokemonNames = []; //new
+
+async function fetchPokemonNames() { //new
+
+  try {
+    const response = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10000');
+    const data = await response.json();
+    pokemonNames = data.results.map(pokemon => pokemon.name);
+    console.log('Fetched Pokémon names:', pokemonNames);
+  } catch (err) {
+
+    console.error('Failed to fetch Pokémon names:', err);
+    
+    }
+}
+
+
+fetchPokemonNames(); // New
+
+searchInput.addEventListener("input", () => { //New
+  const query = searchInput.value.toLowerCase(); //New
+
+  if (query === '') {
+    suggestions.innerHTML = ""; // New (clears suggestions if input is empty.)
+    return;
+  }
+  const matchedNames = pokemonNames.filter(name => name.startsWith(query)); //New
+  showSuggestions(matchedNames); //New
+
+});
+
+function showSuggestions(matchedNames) { //New
+
+  suggestions.innerHTML = ""; //New
+  if (matchedNames.length > 0) { // New
+    matchedNames.forEach(name => { //New
+      const suggestionItem = document.createElement("div"); //New
+      suggestionItem.classList.add("suggestion-item"); //New
+      suggestionItem.textContent = name; //New
+      suggestionItem.addEventListener("click", () => { //New
+        searchInput.value = name; //New
+        suggestions.innerHTML = ""; //New
+
+      })
+      suggestions.appendChild(suggestionItem); //New
+
+    })
+
+
+  }
+
+}
+
+
+
+
 
 
     // Get data

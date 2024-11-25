@@ -45,8 +45,15 @@ main {
   
 }
 
+.small-image {
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+
+}
+
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem; /*  was 1.8, adjusted for responsiveness */
   transform: scale(1, 2);
   font-family: "Arial Black";
   text-decoration: underline;
@@ -60,8 +67,8 @@ h1 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-width: 50px;
-  max-width: 80%;
+  width: 80%; /* was min-width: 50px, use percentage for responsiveness*/
+  max-width: 600px; /* (was 80%), max width for larger screens */
   background-color: white;
   margin: 10px;
   border: 0.1rem solid;
@@ -100,20 +107,46 @@ label {
   align-items: center;
 }
 
+
+.suggestions { /* new */
+
+  /* border: 1px solid #ccc;  causes line on page */
+  border-top: none;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  width: 80%; /* use percentage for responsiveness, (was 200px)*/
+  max-width: 300px; /*new, limit maxium width*/
+  z-index: 1000;
+  margin-top: 100px; /* stop covering the input element*/
+
+}
+
+.suggestion-item { /* New */
+  padding: 10px;
+  cursor: pointer;
+
+}
+
+.suggestion-item:hover { /* New */
+  background-color: #f0f0f0;
+}
+
 input {
-  width: 50%;
-  height: 40px;
+  width: 80%; /* (was 50%), use  percentage for responsiveness */
+  max-width: 400px; /* limit maximum width (was height: 40px)*/
   padding: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
   cursor: grab;
-  box-shadow: -2px 2px 10px #228b22;
+  box-shadow: -2px 2px 10px #e9ece9;
   text-align: center;
   
 }
 
 input:hover {
-  box-shadow: 0 0 10px red;
+  box-shadow: 0 0 10px #FFDE00;
   width: 50%;
   
 }
@@ -132,7 +165,8 @@ button {
 }
 
 button:hover {
-background-color: #228b22;
+background-color: #FFDE00;
+color: black;
 }
 
 .search-output {
@@ -177,9 +211,9 @@ background-color: #228b22;
 .output-bottom {
   display: flex;
   flex-direction: column;
-  min-height: 100px;
-  min-width: 80%;
   align-items: center;
+  width: 90%; /*use percentage for responsiveness, (was min-width: 80%*/
+  max-width: 600px; /* limit maximum width*/
 
 
 }
@@ -220,7 +254,8 @@ background-color: #228b22;
 }
 
 table {
-max-width: 90%;
+width: 90%; /*use percentage for responsiveness, was max-width: 90%*/
+max-width: 600px; /*new, limit maximum width*/
 box-shadow: 0 0 5px black;
 border-collapse: seperate;
 
@@ -238,7 +273,7 @@ border-collapse: seperate;
 
 th, 
 tr {
-  background-color: green;
+  background-color: #3B4CCA;
   border: 1px solid;
 
 }
@@ -363,11 +398,17 @@ td {
   }
 
   .container {
-    width: 80%; /* with on very small screens*/
+    width: 90%; /* adjusted for very small screens, was 80%*/
   }
 
   label {
     font-size: 1rem;
+  }
+
+  input { /* new */
+
+      width: 90%; /* use percentage for responsiveness */
+
   }
 
 }

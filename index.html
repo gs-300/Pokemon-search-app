@@ -10,7 +10,9 @@
 </head>
 <body>
 <main>
-  <h1>Pokémon Search App</h1>
+  <h1>
+    <img src="https://fontmeme.com/permalink/241125/4d1da67a4e9d201aa4bd037963e17905.png" alt="pokemon-font" border="0" class="small-image">
+  </h1>
   <div class="container">
     
     <div class="search_wrapper">
@@ -18,6 +20,12 @@
       <div id="search-input">
         <label for="search-input">Search for Pokémon Name or ID:</label>
         <input type="text" class="search-input"  required></input>
+
+        <!-- New suggestions container -->
+
+        <div class="suggestions" id="suggestions"></div>
+
+
         <div class="options"></div>
         <button id="search-button" type="button" >Search</button>
       </div>

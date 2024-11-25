@@ -20,7 +20,7 @@ body {
   background-color: black;
  
 
-&::before {
+body::before {
   content: "";
   position: absolute;
   top: 0;
@@ -126,6 +126,7 @@ label {
 .suggestion-item { /* New */
   padding: 10px;
   cursor: pointer;
+  text-align: center;
 
 }
 

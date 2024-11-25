@@ -20,7 +20,7 @@ body {
   background-color: black;
  
 
-body::before {
+&::before {
   content: "";
   position: absolute;
   top: 0;

@@ -6,31 +6,31 @@
   padding: 0px;
 }
 
-:root {
+/* :root {
   --red-: #FF0000;
   --boston-university-red-: #CC0000; 
   --cerulean-blue-: #3B4CCA;
   --golden-yellow-: #FFDE00;
   --gold-foil-: #B3A125;
-}
+} */
 
 body {
   position: relative;
   height: 100vh;
   background-color: black;
- 
 
-&::before {
+}
+
+body::before {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/images/pokemonApp\ wallpaper.png');
+  background-image: url('/images/pokemonApp-wallpaper.png');
   background-size: cover;
   opacity: 0.2;
-}
 }
 
 main {
@@ -147,8 +147,8 @@ input {
 }
 
 input:hover {
-  box-shadow: 0 0 10px #FFDE00;
-  width: 50%;
+  box-shadow: 0 0 6px black;
+  width: 70%;
   
 }
 
